@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body>
+    <div
+      id="assignment"
+      class="flex flex-col items-center justify-center p-6 bg-gray-300 w-40 m-20 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:rotate-360">
+      <i class="fas fa-check-circle text-4xl text-green-400 mb-4"></i>
+      <p class="text-lg text-center">
+        Hover over me to see the rotation effect!</p>
+    </div>
+
+    <script>
+      const assignmentBox = document.getElementById("assignment");
+      assignmentBox.addEventListener("mouseover", () => {
+        assignmentBox.classList.add("animate__animated", "animate__rotateIn");
+      });
+      assignmentBox.addEventListener("animationend", () => {
+        assignmentBox.classList.remove(
+          "animate__animated",
+          "animate__rotateIn"
+        );
+      });
+    </script>
+  </body>
+</html>
